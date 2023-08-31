@@ -1,0 +1,37 @@
+<div class="min-w-screen min-h-screen flex items-center justify-center">
+  <form (submit)="login()">
+    <div class="flex flex-col gap-6">
+      <h1 class="font-bold text-3xl">Iniciar Sesión</h1>
+      <div class="flex flex-col rounded-md overflow-hidden w-full">
+        <label for="wide">Username:</label>
+        <input
+          name="username"
+          type="text"
+          class="w-full rounded-md px-4 text-black mt-2"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+      <div class="flex flex-col rounded-md overflow-hidden w-full">
+        <label for="wide">Password:</label>
+        <input
+          name="password"
+          type="password"
+          class="w-full rounded-md px-4 text-black mt-2"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+      <p *ngIf="error !== ''" class="text-red-500 text-lg font-semibold">
+        {{ error }}
+      </p>
+      <button
+        class="bg-indigo-600 text-white px-6 text-lg font-semibold py-4 rounded-md w-full disabled:bg-gray-500"
+        [disabled]="username === '' || password === ''"
+      >
+        Iniciar Sesión
+      </button>
+      <a class="text-sm underline" href="/register">Registrarse</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,57 @@
+<div class="min-w-screen min-h-screen flex items-center justify-center">
+  <form (submit)="register()">
+    <div class="flex flex-col gap-6">
+      <h1 class="font-bold text-3xl">Registrar Usuario</h1>
+      <div class="flex flex-col overflow-hidden w-full">
+        <label for="wide">Username:</label>
+        <input
+          name="username"
+          type="text"
+          class="w-full px-4 text-black mt-2"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+      <div class="flex flex-col overflow-hidden w-full">
+        <label for="wide">Password:</label>
+        <input
+          name="password"
+          type="password"
+          class="w-full px-4 text-black mt-2"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+      <div class="flex flex-col overflow-hidden w-full">
+        <label for="repassword">Confirma Password:</label>
+        <input
+          name="repassword"
+          type="password"
+          class="w-full px-4 text-black mt-2"
+          [(ngModel)]="repassword"
+          required
+        />
+      </div>
+      <div class="overflow-hidden w-full">
+        <input
+          id="admin"
+          name="admin"
+          type="checkbox"
+          class="mr-2"
+          [(ngModel)]="admin"
+          required
+        />
+        <label for="admin" class="inline">Puede borrar</label>
+      </div>
+      <p *ngIf="error !== ''" class="text-red-500 text-lg font-semibold">
+        {{ error }}
+      </p>
+      <button
+        class="bg-indigo-600 text-white px-6 text-lg font-semibold py-4 rounded-md w-full disabled:bg-gray-500"
+        [disabled]="username === '' || password === '' || repassword === ''"
+      >
+        Registrarse
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<div
+  class="fixed bottom-0 left-0 p-4 w-full flex justify-between"
+  [ngClass]="
+    isDanger ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'
+  "
+>
+  <p>{{ text }}</p>
+  <span (click)="close()" class="cursor-pointer text-xl font-bold">X</span>
+</div>

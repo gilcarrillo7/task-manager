@@ -1,27 +1,21 @@
-# TasksManager
+# Administrador de Tareas
+## Pasos para ejecutar la aplicacion:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+1. Instalar dependencias
 
-## Development server
+```console
+npm i
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. Correr en desarrollo
 
-## Code scaffolding
+```console
+npm run start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Abrir navegador en [http://localhost:4200/](://localhost:4200/)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Usar la aplicacioón
+1. Al iniciar la aplicación se mostrará una pantalla de inicio de sesión, si no se tiene un usuario creado dar sobre registrar.
+2. Llenar el formulario para registrar un usuario.
+3. En la pantalla de Tareas se puede agregar, cambiar status o eliminar (si se otorgaron permisos en el registro).
